@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contacts</title>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand h3-visible" onclick="hideCont()">Contacts</a>
+			<a class="navbar-brand"  id="hide-contacts">Add contact</a>
+			<a class="navbar-brand h3-visible" onclick="hideGr()">Groups</a>
+			<a class="navbar-brand"  id="hide-groups">Add group</a>
+		</div>
+	</nav>
+
+</header>
+<div class="container">
+
+	<div class="form form-hide-contacts contacts">
+		<div class="vertical">
+			<div id="contactsForm">
+				<form class="hide">
+					<input id="name" type="text" class="form-control" placeholder="Name" required="">
+					<input id="phone" type="tel" class="form-control" placeholder="Phone" required="" onkeypress="return isNumberKey(event)">
+					<button id="submit" class="btn btn-primary">Add</button>
+				</form>
+			</div>
+			<div id="checkBoxes" class="hide"></div>
+			<div>
+				<ul id="contacts"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="form form-hide-group">
+		<div class="vertical">
+			<div id="groupForm">
+				<form class="hide">
+					<input id="title" type="text" class="form-control" placeholder="Title" required="">
+					<button id="groupSubmit" class="btn btn-primary">Add</button>
+				</form>
+			</div>
+			<div>
+				<ul id="groups">
+					<li id="allContacts" data-group="All">All contacts</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="contacts.js"></script>
+	<script src="groups.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+nav {
+	padding-left: 10px;
+	background: #1a2053;
+}
+a {
+	cursor: pointer;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding-right: 20px;
+}
+.container a {
+	margin-right: 20px;
+}
+li {
+	list-style-type: none;
+	min-width: 300px;
+	border-bottom: 1px solid #3b3b3b;
+	padding: 5px;
+	margin: 5px;
+	cursor: pointer;
+}
+#groups li {
+	min-width: 200px;
+}
+li:hover {
+	background: #f0f8ff;
+}
+span {
+	float: right;
+	margin-left: 5px;
+}
+form {
+	width: 300px;
+}
+input {
+	margin: 5px;
+}
+ul form {
+	min-height: 150px;
+}
+.form {
+	margin: 10px;
+	padding: 10px;
+}
+.vertical {
+	display: flex;
+	flex-direction: column;
+}
+button {
+	width: 40%;
+	margin-left: 5px;
+}
+input[type=checkbox],
+label {
+	float: left;
+	display: inline-block;
+	margin-left: 5px;
+}
+.test {
+	background: #d3d3d3;
+}
+.checkBoxEdit {
+	color: #3b3b3b;
+}
+.hide,
+.form-hide-group,
+form ~ div {
+	display: none;
+}
+.form-visible {
+	display: inline-block;
+}
+.form-hide-contacts {
+	display: inline-block;
+}
