@@ -12,15 +12,15 @@ let port = process.env.PORT || 3000;
 
 require('./db');
 
-http.listen(port, function () {
-	console.log(port);
-});
-
 app.use(bodyParser.json());
 
 app.use('/api/v1', contact);
 app.use('/api/v1', group);
-app.use(express.static(__dirname + '/static/'));
+app.use(express.static(__dirname + '/static'));
+
+http.listen(port, function () {
+	console.log(port);
+});
 
 // error handling
 app.use((req, res, next) => {
